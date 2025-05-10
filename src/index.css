@@ -1,0 +1,141 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 196 65% 45%;  /* #2596be */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 219 70% 15%; /* Navy blue */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 196 65% 45%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 196 65% 45%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 212 27% 84%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+}
+
+@layer components {
+  .section-heading {
+    @apply text-3xl font-bold mb-8 relative inline-block font-heading;
+  }
+  
+  .section-heading::after {
+    @apply content-[''] absolute w-1/2 h-1 bg-brand-blue bottom-0 left-0;
+  }
+  
+  .navbar-link {
+    @apply relative px-3 py-2 transition-all hover:text-brand-blue;
+  }
+  
+  .navbar-link::after {
+    @apply content-[''] absolute w-0 h-[2px] bg-brand-blue bottom-0 left-0 transition-all duration-300;
+  }
+  
+  .navbar-link:hover::after {
+    @apply w-full;
+  }
+  
+  .navbar-link.active::after {
+    @apply w-full;
+  }
+  
+  .skill-badge {
+    @apply px-3 py-1 rounded-full text-sm font-medium bg-muted text-foreground inline-block m-1;
+  }
+  
+  .skill-badge:hover {
+    @apply bg-primary text-primary-foreground;
+  }
+  
+  .btn-primary {
+    @apply bg-brand-blue text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-all font-medium;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-brand-blue text-brand-blue px-6 py-2 rounded-lg hover:bg-brand-blue hover:text-white transition-all font-medium;
+  }
+  
+  .project-card {
+    @apply bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300;
+  }
+  
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 py-20;
+  }
+  
+  .contact-input {
+    @apply w-full bg-muted border border-border rounded-lg px-4 py-2 focus:outline-none focus:border-primary;
+  }
+}
