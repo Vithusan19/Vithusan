@@ -1,5 +1,4 @@
 import { Github, ExternalLink } from "lucide-react";
-import foodimg from "../assets/food.jpg"
 import doctor from "../assets/doctorbanner.jpg"
 const Projects = () => {
   const projects = [
@@ -30,7 +29,7 @@ const Projects = () => {
     },
     {
       title: "Food Delivery System",
-      image: foodimg,
+       image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=80",
       description: "Online food ordering system with user-side and restaurant-side views.",
       technologies: ["Next.js", "Spring Boot", "MySQL", "Tailwind CSS"],
       githubFrontend: "https://github.com/vithusan19/food-delivery-frontend",
