@@ -1,26 +1,66 @@
+import { Code, Database, Wrench, Workflow } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+import { Badge } from "@/components/ui/badge";
 
 const Skills = () => {
   const skillCategories = [
     {
       category: "Languages",
-      skills: ["Java", "JavaScript", "TypeScript", "Python", "PHP", "HTML/CSS"],
+      icon: <Code className="h-5 w-5" />,
+      skills: [
+        { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+        { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+        { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+        { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+        { name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+        { name: "HTML/CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+      ],
     },
     {
       category: "Frameworks/Libraries",
-      skills: ["React", "Next.js", "Spring Boot", "Django", ".js"],
+      icon: <Code className="h-5 w-5" />,
+      skills: [
+        { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+        { name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+        { name: "Spring Boot", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
+        { name: "Django", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
+       
+      ],
     },
     {
       category: "Databases",
-      skills: ["MySQL", "PostgreSQL",],
+      icon: <Database className="h-5 w-5" />,
+      skills: [
+        { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+        { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+       
+       
+      ],
     },
     {
       category: "Tools",
-      skills: ["Git", "AWS", "VS Code", "Postman", "Figma"],
+      icon: <Wrench className="h-5 w-5" />,
+      skills: [
+        { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+        
+        { name: "AWS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
+        { name: "VS Code", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+        { name: "Postman", logo: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
+        { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+      ],
     },
-    // {
-    //   category: "Methodologies",
-    //   skills: ["Agile", "Scrum", "TDD", "CI/CD", "RESTful APIs", "GraphQL"],
-    // },
+    {
+      category: "Methodologies",
+      icon: <Workflow className="h-5 w-5" />,
+      skills: [
+        { name: "Agile", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg" },
+        // { name: "Scrum", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" },
+        // { name: "TDD", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" },
+        // { name: "CI/CD", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+        { name: "RESTful APIs", logo: "https://www.vectorlogo.zone/logos/openapis/openapis-icon.svg" },
+       // { name: "GraphQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" },
+      ],
+    },
   ];
 
   return (
@@ -31,11 +71,22 @@ const Skills = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category) => (
             <div key={category.category} className="bg-card rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-semibold mb-4 font-heading text-brand-blue">{category.category}</h3>
-              <div className="flex flex-wrap">
+              <h3 className="text-xl font-semibold mb-4 font-heading text-brand-blue flex items-center gap-2">
+                {category.icon}
+                {category.category}
+              </h3>
+              <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
-                  <span key={skill} className="skill-badge">
-                    {skill}
+                  <span key={skill.name} className="skill-badge flex items-center gap-2">
+                    <img 
+                      src={skill.logo} 
+                      alt={skill.name} 
+                      className="h-4 w-4" 
+                      onError={(e) => {
+                        e.currentTarget.src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg";
+                      }}
+                    />
+                    {skill.name}
                   </span>
                 ))}
               </div>
@@ -51,7 +102,7 @@ const Skills = () => {
               { name: "Frontend Development", level: 90 },
               { name: "Backend Development", level: 85 },
               { name: "Database Design", level: 80 },
-              // { name: "DevOps", level: 70 },
+              { name: "DevOps", level: 70 },
               { name: "UI/UX Design", level: 75 },
               { name: "System Architecture", level: 80 },
             ].map((skill) => (
