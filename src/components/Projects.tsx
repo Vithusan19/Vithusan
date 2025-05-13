@@ -28,7 +28,7 @@ const Projects = () => {
     },
     {
       title: "Food Delivery System",
-       image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=80",
+       image: "https://nova.novalac.me/wp-content/uploads/2019/06/fast-food.jpg",
       description: "Online food ordering system with user-side and restaurant-side views.",
       technologies: ["Next.js", "Spring Boot", "MySQL", "Tailwind CSS"],
       githubFrontend: "https://github.com/vithusan19/food-delivery-frontend",
