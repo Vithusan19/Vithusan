@@ -3,7 +3,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Doctor Appointment System",
-      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1000&q=80",
+      image: "https://static.vecteezy.com/system/resources/previews/016/699/936/non_2x/book-doctor-appointment-online-flat-banner-template-making-visit-poster-leaflet-printable-color-designs-editable-flyer-page-with-text-space-vector.jpg",
       description: "A full-stack system to manage doctor appointments, token numbers, patient records, and schedules.",
       technologies: ["Django", "Next.js", "PostgreSQL", "Tailwind CSS"],
       githubFrontend: "https://github.com/vithusan19/doctor-appointment",
