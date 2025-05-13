@@ -8,6 +8,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 3000,
+    base:process.env.VITE_BASE_URL || "/Vithusan",
   },
   plugins: [
     react(),
