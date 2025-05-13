@@ -1,10 +1,9 @@
 import { Github, ExternalLink } from "lucide-react";
-import doctor from "../assets/doctorbanner.jpg"
 const Projects = () => {
   const projects = [
     {
       title: "Doctor Appointment System",
-      image: doctor,
+      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1000&q=80",
       description: "A full-stack system to manage doctor appointments, token numbers, patient records, and schedules.",
       technologies: ["Django", "Next.js", "PostgreSQL", "Tailwind CSS"],
       githubFrontend: "https://github.com/vithusan19/doctor-appointment",
