@@ -1,14 +1,24 @@
 import { Github, ExternalLink } from "lucide-react";
 const Projects = () => {
   const projects = [
+    // {
+    //   title: "Doctor Appointment System",
+    //   image: "https://static.vecteezy.com/system/resources/previews/016/699/936/non_2x/book-doctor-appointment-online-flat-banner-template-making-visit-poster-leaflet-printable-color-designs-editable-flyer-page-with-text-space-vector.jpg",
+    //   description: "A full-stack system to manage doctor appointments, token numbers, patient records, and schedules.",
+    //   technologies: ["Django", "Next.js", "PostgreSQL", "Tailwind CSS"],
+    //   githubFrontend: "https://github.com/vithusan19/doctor-appointment",
+    //   demo: "#",
+    // },
     {
-      title: "Doctor Appointment System",
-      image: "https://static.vecteezy.com/system/resources/previews/016/699/936/non_2x/book-doctor-appointment-online-flat-banner-template-making-visit-poster-leaflet-printable-color-designs-editable-flyer-page-with-text-space-vector.jpg",
-      description: "A full-stack system to manage doctor appointments, token numbers, patient records, and schedules.",
-      technologies: ["Django", "Next.js", "PostgreSQL", "Tailwind CSS"],
-      githubFrontend: "https://github.com/vithusan19/doctor-appointment",
-      demo: "#",
-    },
+  title: "Weather Forecast App",
+  image: "https://res.cloudinary.com/upwork-cloud/image/upload/c_scale,w_1000/v1693421295/catalog/1696955010279489536/fvgktu5suw8xbr6hkuza.jpg",
+  description: "A real-time weather forecast app built with React, integrating live weather APIs to show current conditions by city.",
+  technologies: ["React", "OpenWeatherMap API", "Tailwind CSS"],
+  githubFrontend: "https://github.com/Vithu1909/Weather",
+  demo: "#",
+},
+
+    
     {
       title: "EcoRide Carpooling Platform",
       image: "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1000&q=80",
