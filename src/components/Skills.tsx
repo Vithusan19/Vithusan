@@ -22,19 +22,19 @@ const Skills = () => {
       skills: [
         { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
         { name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+        { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+        { name: "Express", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
         { name: "Spring Boot", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
         { name: "Django", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
-       
       ],
     },
     {
       category: "Databases",
       icon: <Database className="h-5 w-5" />,
       skills: [
+        { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
         { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
         { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
-       
-       
       ],
     },
     {
@@ -42,7 +42,7 @@ const Skills = () => {
       icon: <Wrench className="h-5 w-5" />,
       skills: [
         { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-        
+        { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
         { name: "AWS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
         { name: "VS Code", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
         { name: "Postman", logo: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
@@ -53,12 +53,10 @@ const Skills = () => {
       category: "Methodologies",
       icon: <Workflow className="h-5 w-5" />,
       skills: [
+        { name: "MERN Stack", logo: "https://www.vectorlogo.zone/logos/mongodb/mongodb-ar21.svg" },
         { name: "Agile", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg" },
-        // { name: "Scrum", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" },
-        // { name: "TDD", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" },
-        // { name: "CI/CD", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
         { name: "RESTful APIs", logo: "https://www.vectorlogo.zone/logos/openapis/openapis-icon.svg" },
-       // { name: "GraphQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" },
+        { name: "Microservices", logo: "https://www.vectorlogo.zone/logos/nestjs/nestjs-icon.svg" },
       ],
     },
   ];
@@ -105,6 +103,9 @@ const Skills = () => {
               { name: "DevOps", level: 70 },
               { name: "UI/UX Design", level: 75 },
               { name: "System Architecture", level: 80 },
+              { name: "MERN Stack", level: 85 },
+              { name: "REST API Development", level: 90 },
+              { name: "Cloud Deployment", level: 75 },
             ].map((skill) => (
               <div key={skill.name} className="mb-4">
                 <div className="flex justify-between mb-1">
